@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+
+.container1 {
+  float:right;
+  width:900px;
+  position: relative;
+
+}
+
+.image1 {
+  display: block;
+  width: 900px;
+  height: auto;
+}
+
+.overlay1 {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 900px;
+  height: 0;
+  transition: .5s ease;
+  opacity:0.75;
+}
+
+.container1:hover .overlay1 {
+  bottom: 0;
+  height:100%;
+}
+
+.text1 {
+  white-space: nowrap; 
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container2 {
+  float:left;
+  position: relative;
+  width: 900px;
+  cursor:pointer;
+}
+
+.image2 {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor:pointer;
+}
+
+.overlay2 {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: orchid;
+  overflow: hidden;
+  width: 900px;
+  height: 0px;
+  transition: .5s ease;
+  opacity:0.75;
+  cursor:pointer;
+}
+
+.container2:hover .overlay2 {
+  bottom: 0;
+  height: 100%;
+  cursor:pointer;
+}
+
+.text2 {
+  white-space: nowrap; 
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  cursor:pointer;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.mySlides {display:none;}
+.p100{
+
+background-color:#097770;
+font-family:"Times New Roman",Times,sans-serif;
+padding:20px;
+
+}
+
+.p101{
+background-color:teal;
+font-size:20px;
+text-align:center;
+}
+.p2{
+background-color:rgb(170,143,150);
+
+}
+
+.dropbtn {
+  background-color:#20639B;
+  color: WHITE;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right:0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size:15px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color:#20639B ;color:white;}
+.dropdown:hover .dropdown-content {color:burlywood; display: block;}
+.dropdown:hover .dropbtn {background-color: #1e3d59;}
+
+.show {display: block;}
+.sidenav {
+  height:100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 10;
+  left: 10;
+  background:url('back6.jpg');
+  background-color:#3caea3;
+  overflow-x: hidden;
+  padding-top: 2px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 20px 1px;
+}
+
+.footer_container{
+    width: 100%;
+background:url('bg main1.jpg');
+
+color:black;
+background-color:#ed553b;
+}
+.footer_container strong{
+    font-weight: bold;
+}
+.footer_container div.container{
+    width: 200px;
+    float: left;
+
+
+}
+.footer_container ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color:black;
+}
+.footer_container ul li {
+    width: 300px;
+    float: left;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+  background: rgba(23,162,184,0.3);
+}
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .box{
+  background: white;
+  width: calc(33% - 10px);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+.leftquote{
+  font-size: 100px;
+  color: #17a2b8;
+  padding-top: 0px;
+}
+.wrapper .box .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0px;
+}
+.box .info .name{
+  font-weight: 600;
+  font-size: 30px;
+}
+.box .info .job{
+  font-size: 16px;
+  font-weight: 500;
+  color: #17a2b8;
+}
+.box .info .stars{
+  margin-top: 5px;
+  font-size: 36px;
+}
+.box .info .stars b{
+  color: #17a2b8;
+}
+
+.content .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+
+@media (max-width: 1045px) {
+  .wrapper .box{
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .wrapper .box{
+    width: 100%;
+  }
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 75px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: orchid;
+  color: white;
+}
+</style>
+<body bgcolor="E7E8D1">
+<div class="sidenav">
+<img src="logo.png" height="80px" width="200px" style="padding:10px"/>
+<a href="http://localhost/checkup/appointment1.php" target="_blank">Book an Appointment</a>
+<a href="http://localhost/checkup/checkup1.php" target="_blank">Book for Checkup</a>
+<a href="http://localhost/checkup/covid1.php" target="_blank">COVID TEST</a>
+<a href="http://localhost/checkup/vaccine.php" target="_blank">VACCINATION</a>
+<ul>
+<li> <i class="material-icons">local_post_office</i> <a href="mailto:password@cumail.in">mail us</a></li>
+<li> <i class="material-icons">local_phone</i> <a href="tel:57924357">call us</a></li>
+</ul>
+
+<p style="font-size:20px; padding:10px; color:black"> <i class="material-icons">place</i> 37, sardar patel road,<br/>bandra west,<br/>Mumbai (400001).</p>
+</div>
+<div class="main">
+<img src="logo.png" height="100px" width="300px" style="border:dashed; border-color:rgb(170,143,170); "/>
+<a href="#" class="fa fa-facebook" style="position:top-right"></a>
+<a href="#" class="fa fa-twitter" style="position:top-right" padding="40px"></a>
+<a href="#" class="fa fa-instagram"></a>
+FOR EMERGENCY: <i class="fa fa-phone" style="font-size:30px"></i>2147.    
+CALL AT:<i class="fa fa-user-md"></i> 1800564
+<div class="p100" align="center">MOTHER TERESA HOSPITAL</div>
+<div class="p2" align="center" style="background-color:teal">
+
+<div class="dropdown" style="padding:20px;">
+  <button class="dropbtn">ABOUT US</button>
+  <div class="dropdown-content" style="left:0;">
+    <a href="introduction.html"><b>&#187;</b> Introduction.</a>
+    <a href="mission.html"><b>&#187;</b> Mission & Vision.</a>
+    <a href="home page2.html"><b>&#187;</b> home page</a>
+  </div>
+</div>
+
+<div class="dropdown" style="padding:20px;">
+  <button class="dropbtn">SERGICAL DEPT.</button>
+  <div class="dropdown-content" style="left:0;">
+    <a href="accident.html"><b>&#187;</b> Accident & Emergency.</a>
+    <a href="radiology.html"><b>&#187;</b> Radiology.</a>
+    <a href="urology.html"><b>&#187;</b> Urology.</a>
+    <a href="joint.html"><b>&#187;</b> Joint Replacement.</a>
+    <a href="plastic.html"><b>&#187;</b> Plastic Surgery.</a>
+  </div>
+</div>
+
+<div class="dropdown" style="padding:20px;">
+  <button class="dropbtn">MEDICAL DEPT.</button>
+  <div class="dropdown-content" style="left:0;">
+    <a href="cardiology.html"><b>&#187;</b> Cardiology.</a>
+    <a href="neurology.html"><b>&#187;</b> Neurology.</a>
+    <a href="nephrology.html"><b>&#187;</b> Nephrology.</a>
+    <a href="dental.html"><b>&#187;</b> Dental.</a>
+    <a href="dermatology.html"><b>&#187;</b> Dermatology.</a>
+  </div>
+</div>
+
+<div class="dropdown" style="padding:20px;">
+  <button class="dropbtn">PATIENT CARE</button>
+  <div class="dropdown-content" style="left:0;">
+    <a href="http://localhost/checkup/appointment1.php" target="_blank"><b>&#187;</b> Book An Appointment.</a>
+    <a href="http://localhost/checkup/checkup1.php" target="_blank"><b>&#187;</b> Routine Checkup.</a>
+    <a href="health.html"><b>&#187;</b> Health Tips.</a>
+    <a href="facilities.html"><b>&#187;</b> Facilities.</a>
+  </div>
+</div>
+
+<div class="dropdown" style="padding:20px;">
+  <button class="dropbtn">COORPERATE & TPA</button>
+  <div class="dropdown-content" style="left:0;">
+    <a href="coorperate.html"><b>&#187;</b> coorperate and tpa</a>
+
+  </div>
+</div>
+
+<div class="dropdown" style="padding:20px;">
+  <button class="dropbtn">CONTACT US.</button>
+  <div class="dropdown-content" style="left:0;">
+    <a href="http://localhost/checkup/query1.php" target="_blank"><b>&#187;</b> Post a query</a>
+    <a href="http://localhost/checkup/feedback1.php" target="_blank"><b>&#187;</b> feedback</a>
+    <a href="tel:57924357"><b>&#187;</b> call us.</a>
+    <a href="mailto:password@cumail.in"><b>&#187;</b> mail us.</a>
+  </div>
+</div>
+
+</div>
+
+
+
+
+<h1 style="text-align:center"></h1>
+<div align="center"><img src="health.jpg"/></div>
+<p class="p3" align="center">HEALTH TIPS</p><br/>
+<p class="p4"><pre><p> 1. How to take care this monsoon
+  As the monsoons arrive after the long and scorching Indian summer, most of us look forward to the cloudy weather, the cooling showers, the darkening skies, the hot pakoras, soulful music and all the romance and joy of the rains. You can enjoy the monsoons much better if you get better aware of the dangers that lurk behind the cool wet weather. Take a few precautions and you can avoid the infections that can make you ill and miserable during this wonderful season <br>
+  
+  Continue drinking plenty of water in this season as it is important to keep your body hydrated every <br>
+  Wash all the fruits and vegetables, especially the green leafy vegetables and cauliflower as they play a host for worms and larvae and dirt from <br>
+  Keep your body warm as it becomes easy for viruses to attack once the body temperature cools down.
+  Avoid uncooked fruits and salads in this season as the possibility of getting caught by germs in these kinds of foods is much higher. <br>
+  Do not walk barefooted or wear wet shoes in this season specifically suggested for diabetic patients.
+  Maintain general hygiene and avoid roadside vendor food as the food easily gets affected with bacteria and fungi. <br>
+  2. Common infections that strike during the monsoon:
+  Water Borne: Cholera, Typhoid, Hepatitis A, Diarrhoea
+  Vector-borne: Malaria, dengue, haemorrhagic fever
+  Due to exposure to water/rain: Hypothermia, Respiratory tract infections, Leptospirosis
+  Viral respiratory tract infections like colds and flu <br>
+  3. What to eat? & What Not to eat? this monsoon:
+  During monsoon, avoid consuming raw food items even if it is in the form of fruit/vegetable salad. Some vegetables especially the leafy ones like cauliflower could harbor dirt from the streets, not to mention worms and larvae that find it easier to camouflage themselves. Instead, including garlic, pepper, ginger, turmeric, jeera powder and coriander in your diet as it helps in reducing indigestion problems and improves your immune system. In addition, increase milk products, nuts and soya products that give your hair natural, healthy look. <br>
+  
+  4. Incorporate the following healthy habits in your daily routine:
+  Get enough sleep
+  Give up smoking
+  Be physically active
+  Say no to drugs and alcohol
+  Eat a lot of fibre rich foods
+  Never skip your periodic health checkups <br>
+  5. Healthy drinking water habits
+  Avoid alcohol and soft drinks as these are diuretics.
+  Drink a glass of water before, during and after strenuous exercise.
+  Drink a glass or two of water as soon as you get up each morning.
+  If you wish to reduce your calorie intake, drink a glass of water before each meal.
+  Eat a lot of fibres rich foods.
+  Keep a one-litre bottle beside you all day and finish it every day.
+  With each meal, have at least one glass of water. <br>
+  6. Integrate Activity into Your Everyday Life
+  Create a new morning routine. Start your day with 10 minutes of movement indoors or outdoors. Some stretching and a short walk first thing in the morning can be better than caffeine. You can even do some stretching in bed before you get up. <br>
+  
+  7. Sleep is Important
+  Sleep plays a vital role in good health and well-being throughout your life. Getting enough quality sleep at the right times can help protect your mental health, physical health, quality of life and safety. The way you feel while you're awake depends in part on what happens while you’re sleeping. <br>
+  
+  8. Keep Your Heart Healthy
+  Are you eating foods that could add years to your life? Try these delicious options to help keep your heart healthy. Include, fresh herbs, black beans, walnuts, almonds, carrots, oatmeals, cherries in you meal for a healthy heart. <br>
+  
+  9. How to take care in Summers
+  Summer brings with it a plethora of problems – skin, hair and health problems like sunstroke, and heat boils. Summer also calls for a change in diet and other healthy living tips. We chalk out a few best summer health care tips to practice this summer <br>
+  
+  You can prevent heat stroke by wearing loose and light clothes, drink water and do not exert yourself during summer.
+  Avoid direct sunlight. Always use a good sunscreen with SPF 30+
+  For avoiding prickly heat, have cold showers, wear loose clothes, put talcum powder after a bath and apply calamine lotion on the rashes. Apply medicated talcum powder. Keep the area dry and clean.
+  One must eat cold foods such as watermelon, yogurt, berries and the likes. Such foods are low in calories and additionally require very little energy for digestion.
+  Maintaining food hygiene is crucial in this season. <br>
+  10. Taking good care in the Winter season
+  Keeping warm over winter months can help prevent colds, flu or more serious health problems like pneumonia. Find out some simple things you can do to keep warm and stay healthy and make the best use of your heating at home. <br>
+  
+  Try to heat all your rooms, if not, then make sure you keep your living room warm throughout the day and heat your bedroom before going to bed.
+  A balanced diet will help keep you warm and healthy in the winter. Make sure you and your family eat at least one hot meal a day (soup is nutritious and warming, and inexpensive to make or buy).
+  Staying active is good for your health, walking, for example, can be good for you. If the weather prevents you getting outside, stay active indoors - catch up on all the household tasks you've been putting off. 
+  Wear something warm. <br>
+  11. Staying mentally active
+  Studies show that mental decline is not an inevitable part of ageing. People who lead intellectually stimulating lives are more likely to be free of dementia conditions like Alzheimer's disease. To keep your brain in shape, there are three main routes to an agile mind: healthy diet, aerobic exercise and mental stimulation. <br>
+  
+  12. Exercise daily
+  Exercise is vital for a healthy life. It gets the heart pumping and the circulation going, which increases blood flow, carrying more nutrients and oxygen to the brain.</p></pre><br/>
+
+
+<div class="footer_container">
+    <div class="container" style="font-size:15px; padding:30px; padding-left:100px">
+        <strong>ABOUT US</strong>
+        <ul style="list-style-type:arrow">
+            <li><b>&#187;</b><a href="introduction.html"> introduction</a></li>
+            <li><b>&#187;</b><a href="mission.html"> mission & vision</a></li>
+        </ul>
+    </div>
+    <div class="container"  style="font-size:15px; padding:30px; padding-left:100px">
+        <strong>SERGICAL</strong>
+        <ul style="list-style-type:disc">
+            <li><b>&#187;</b><a href="accident.html"> Accident & <br/>emergency</a></li>
+            <li><b>&#187;</b><a href="radiology.html"> Radiology</a></li>
+            <li><b>&#187;</b><a href="urology.html"> Urology</a></li>
+            <li><b>&#187;</b><a href="joint.html"> Joint Replacement</a></li>
+            <li><b>&#187;</b><a href="plastic.html"> Plastic Surgery</a></li>
+        </ul>
+    </div>
+    <div class="container"  style="font-size:15px; padding:30px; padding-left:100px">
+        <strong>MEDICAL</strong>
+        <ul style="list-style-type:disc">
+            <li><b>&#187;</b><a href="cardiology.html"> Cardiology</a></li>
+            <li><b>&#187;</b><a href="neurology.html"> Neurology</a></li>
+            <li><b>&#187;</b><a href="nephrology.html"> Nephrology</a></li>
+            <li><b>&#187;</b><a href="dental.html"> Dental</a></li>
+            <li><b>&#187;</b><a href="dermatology.html"> Dermatology</a></li>
+        </ul>
+    </div>
+    <div class="container"  style="font-size:15px; padding:30px; padding-left:100px">
+        <strong>PATIENT CARE</strong>
+        <ul style="list-style-type:disc">
+            <li><b>&#187;</b><a href="http://localhost/checkup/appointment1.php" target="_blank"> For<br/>Appointment</a></li>
+            <li><b>&#187;</b><a href="health.html"> Health Tips</a></li>
+            <li><b>&#187;</b><a href="facilities.html"> Facilities</a></li>            
+        </ul>
+    </div>
+    <div class="container"  style="font-size:15px; padding:30px; padding-left:100px">
+        <strong>CONTACT US</strong>
+        <ul style="list-style-type:disc">
+            <li> <i class="material-icons">place</i> 37, sardar patel <br/>road,bandra west,<br/>Mumbai (400001).</li>
+            <li> <i class="material-icons">local_post_office</i> <a href="mailto:password@cumail.in">password@cumail.in</a></li>
+            <li> <i class="material-icons">local_phone</i> <a href="tel:749547854">749547854,</a></li>
+            <li> <i class="material-icons">local_phone</i> </b> <a href="tel:653874">653847</a></li>
+            <li><a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </li>            
+        </ul>
+    </div>
+<p class="p200"><br/><br/><br/>`</p><br/>`<br/><p class="p200"><br/>`</p>
+</div>
+<br/>
+<p class="p101"> &copy;MOTHER TERESA HOSPITAL,All Rights Reserved. </p>
+</div>
+
+
+</body>
+</html>
