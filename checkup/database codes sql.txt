@@ -1,0 +1,361 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 16, 2021 at 11:22 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `hello`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointment`
+--
+
+CREATE TABLE `appointment` (
+  `id` int(100) NOT NULL,
+  `fName` varchar(20) NOT NULL,
+  `lName` varchar(20) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `gender` enum('m','f','o') NOT NULL,
+  `DOB` date NOT NULL,
+  `number` bigint(10) NOT NULL,
+  `DOAP` date NOT NULL,
+  `timing` enum('9-12','12-3','3-6','6-9') NOT NULL,
+  `dental` enum('y','-') NOT NULL,
+  `cardio` enum('y','-') NOT NULL,
+  `neuro` enum('y','-') NOT NULL,
+  `nephro` enum('y','-') NOT NULL,
+  `dermato` enum('y','-') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `appointment`
+--
+
+INSERT INTO `appointment` (`id`, `fName`, `lName`, `address`, `gender`, `DOB`, `number`, `DOAP`, `timing`, `dental`, `cardio`, `neuro`, `nephro`, `dermato`) VALUES
+(45, 'mr', 'dj', 'dddddddddddddddddjjjjjjjjjjjjjjjjjjjj', 'o', '2021-07-07', 7777777, '2021-07-07', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(46, 'mr', 'dj', 'dddddddddddddddddjjjjjjjjjjjjjjjjjjjj', 'o', '2021-07-07', 7777777, '2021-07-07', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(77, 'sgrhbrth', 'rhthbtxfg', 'efdg rggrgrtgrg', 'f', '2021-07-02', 23435435, '2021-07-04', '9-12', '', 'y', 'y', '', 'y'),
+(78, 'sgrhbrth', 'rhthbtxfg', 'efdg rggrgrtgrg', 'f', '2021-07-02', 23435435, '2021-07-04', '9-12', '', 'y', 'y', '', 'y'),
+(81, 'apna', 'bhidu', 'apna baccha hai tu', 'm', '2021-07-03', 67676767, '2021-07-08', '9-12', 'y', 'y', 'y', 'y', ''),
+(82, 'apna', 'bhidu', 'apna baccha hai tu', 'm', '2021-07-03', 67676767, '2021-07-08', '9-12', 'y', 'y', 'y', 'y', ''),
+(87, 'rohit', '', 'fijseiofje', 'f', '2021-07-07', 7834895743, '2021-07-02', '9-12', 'y', '', 'y', 'y', ''),
+(88, 'rohit', '', 'fijseiofje', 'f', '2021-07-07', 7834895743, '2021-07-02', '9-12', 'y', '', 'y', 'y', ''),
+(89, 'rohit', '', 'fijseiofje', 'f', '2021-07-07', 7834895743, '2021-07-02', '9-12', 'y', '', 'y', 'y', ''),
+(90, 'rohit', '', 'fijseiofje', 'f', '2021-07-07', 7834895743, '2021-07-02', '9-12', 'y', '', 'y', 'y', ''),
+(113, 'shah', 'khan', 'dfrer vvrvr fernfkdjn', 'm', '2021-06-29', 3343343344, '2021-07-20', '3-6', '', 'y', '', 'y', ''),
+(114, 'shah', 'khan', 'dfrer vvrvr fernfkdjn', 'm', '2021-06-29', 3343343344, '2021-07-20', '3-6', '', 'y', '', 'y', ''),
+(115, 'shah', 'khan', 'dfrer vvrvr fernfkdjn', 'm', '2021-06-28', 3343343344, '2021-07-21', '3-6', '', 'y', 'y', '', 'y'),
+(116, 'shah', 'khan', 'dfrer vvrvr fernfkdjn', 'm', '2021-06-28', 3343343344, '2021-07-21', '3-6', '', 'y', 'y', '', 'y'),
+(117, 'salman', 'khan', 'joikdir iogkfkv rkofpkr', 'm', '1967-06-01', 9876543210, '2021-07-21', '6-9', 'y', 'y', '', '', ''),
+(118, 'salman', 'khan', 'joikdir iogkfkv rkofpkr', 'm', '1967-06-01', 9876543210, '2021-07-21', '6-9', 'y', 'y', '', '', ''),
+(119, 'amir', 'khan', 'tgt yhrtg  rgrdfv ', 'm', '2021-06-28', 3693693690, '2021-07-24', '12-3', 'y', 'y', 'y', 'y', 'y'),
+(120, 'amir', 'khan', 'tgt yhrtg  rgrdfv ', 'm', '2021-06-28', 3693693690, '2021-07-24', '12-3', 'y', 'y', 'y', 'y', 'y'),
+(121, 'thgthft', 'fuhfiew', '', 'f', '2015-06-01', 1234567890, '2021-07-17', '3-6', '', 'y', 'y', 'y', ''),
+(122, 'thgthft', 'fuhfiew', '', 'f', '2015-06-01', 1234567890, '2021-07-17', '3-6', '', 'y', 'y', 'y', ''),
+(123, 'peter', 'quill', 'massuriee', 'm', '1963-06-01', 9876543211, '2021-07-21', '12-3', '', 'y', '', 'y', ''),
+(124, 'peter', 'quill', 'massuriee', 'm', '1963-06-01', 9876543211, '2021-07-21', '12-3', '', 'y', '', 'y', ''),
+(125, 'gupta', 'brothers', 'south africa', 'f', '2015-06-01', 8888888888, '2021-07-18', '9-12', '', '', 'y', '', 'y'),
+(126, 'gupta', 'brothers', 'south africa', 'f', '2015-06-01', 8888888888, '2021-07-18', '9-12', '', '', 'y', '', 'y');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `checkup`
+--
+
+CREATE TABLE `checkup` (
+  `id` int(11) NOT NULL,
+  `fName` varchar(20) NOT NULL,
+  `lName` varchar(20) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `gender` enum('m','f','o') NOT NULL,
+  `DOB` date NOT NULL,
+  `number` bigint(11) NOT NULL,
+  `DOAP` date NOT NULL,
+  `timing` enum('9-12','12-3','3-6','6-9') NOT NULL,
+  `blood` enum('y','-') NOT NULL,
+  `glucose` enum('y','-') NOT NULL,
+  `thyroid` enum('y','-') NOT NULL,
+  `vitamin` enum('y','-') NOT NULL,
+  `plasma` enum('y','-') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `checkup`
+--
+
+INSERT INTO `checkup` (`id`, `fName`, `lName`, `address`, `gender`, `DOB`, `number`, `DOAP`, `timing`, `blood`, `glucose`, `thyroid`, `vitamin`, `plasma`) VALUES
+(1, 'akshay', 'kumar', 'just fitness', 'm', '1965-06-02', 6789, '2021-07-05', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(2, 'akshay', 'kumar', 'just fitness', 'm', '1965-06-02', 6789, '2021-07-05', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(3, 'akshay', 'kumar', 'just fitness', 'm', '1965-06-02', 6789, '2021-07-05', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(4, 'akshay', 'kumar', 'just fitness', 'm', '1965-06-02', 6789, '2021-07-05', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(5, 'akshay', 'kumar', 'just fitness', 'm', '1965-06-02', 6789, '2021-07-05', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(6, 'akshay', 'kumar', 'just fitness', 'm', '1965-06-02', 6789, '2021-07-05', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(7, 'akshay', 'kumar', 'just fitness', 'm', '1965-06-02', 6789, '2021-07-05', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(8, 'akshay', 'kumar', 'just fitness', 'm', '1965-06-02', 6789, '2021-07-05', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(9, 'eijdseli', 'vndfkvfn', 'FEIF KFERIJFRFKL DIEJFEMKFC', 'f', '2021-07-07', 34623984, '2021-07-02', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(10, 'eijdseli', 'vndfkvfn', 'FEIF KFERIJFRFKL DIEJFEMKFC', 'f', '2021-07-07', 34623984, '2021-07-02', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(11, 'apna ', 'bhidu', 'apna baccha hai tu', 'm', '2021-07-02', 2147483647, '2021-07-05', '9-12', 'y', 'y', 'y', '', ''),
+(12, 'apna ', 'bhidu', 'apna baccha hai tu', 'm', '2021-07-02', 2147483647, '2021-07-05', '9-12', 'y', 'y', 'y', '', ''),
+(13, 'vfef', 'regtrghtr', 'fg th h', 'f', '2021-07-06', 45345, '2021-07-08', '9-12', '', '', '', '', 'y'),
+(14, 'vfef', 'regtrghtr', 'fg th h', 'f', '2021-07-06', 45345, '2021-07-08', '9-12', '', '', '', '', 'y'),
+(15, 'grgdrg', 'grgrfg', 'dvgfvfbdfb', 'm', '2021-07-05', 5435454, '2021-07-08', '9-12', '', '', 'y', 'y', ''),
+(16, 'grgdrg', 'grgrfg', 'dvgfvfbdfb', 'm', '2021-07-05', 5435454, '2021-07-08', '9-12', '', '', 'y', 'y', ''),
+(17, 'fdskfns', 'grrg', 'hgfhfhbgf ', 'f', '2021-07-03', 465465, '2021-07-02', '9-12', 'y', '', 'y', '', ''),
+(18, 'fdskfns', 'grrg', 'hgfhfhbgf ', 'f', '2021-07-03', 465465, '2021-07-02', '9-12', 'y', '', 'y', '', ''),
+(19, 'heloo', 'world', 'gfggg', 'f', '2021-07-01', 2147483647, '2021-07-05', '9-12', '', 'y', '', '', ''),
+(20, 'heloo', 'world', 'gfggg', 'f', '2021-07-01', 2147483647, '2021-07-05', '9-12', '', 'y', '', '', ''),
+(21, 'heloo', 'world', 'gfggg', 'f', '2021-07-01', 2147483647, '2021-07-05', '9-12', '', 'y', '', '', ''),
+(22, 'heloo', 'world', 'gfggg', 'f', '2021-07-01', 2147483647, '2021-07-05', '9-12', '', 'y', '', '', ''),
+(23, 'rohit', 'fefe', 'gfggg', 'f', '2021-07-01', 2147483647, '2021-07-08', '9-12', '', '', 'y', 'y', ''),
+(24, 'rohit', 'fefe', 'gfggg', 'f', '2021-07-01', 2147483647, '2021-07-08', '9-12', '', '', 'y', 'y', ''),
+(25, 'rohit', 'sharma', 'efijefo eeofkp owdk', '', '2021-07-01', 2147483647, '2021-07-01', '9-12', '', '', 'y', '', ''),
+(26, 'rohit', 'sharma', 'efijefo eeofkp owdk', '', '2021-07-01', 2147483647, '2021-07-01', '9-12', '', '', 'y', '', ''),
+(27, 'ravi', 'shastri', 'heello crfcrf', '', '2021-07-01', 2147483647, '2021-07-02', '9-12', 'y', '', 'y', 'y', 'y'),
+(28, 'ravi', 'shastri', 'heello crfcrf', '', '2021-07-01', 2147483647, '2021-07-02', '9-12', 'y', '', 'y', 'y', 'y'),
+(29, 'rgr', 'rgr', 'grgrgr', 'f', '2021-07-01', 2147483647, '2021-07-08', '9-12', '', 'y', '', '', ''),
+(30, 'rgr', 'rgr', 'grgrgr', 'f', '2021-07-01', 2147483647, '2021-07-08', '9-12', '', 'y', '', '', ''),
+(31, 'harshad', 'mehta', 'aaaaaaaaaaeeeeee ', 'f', '2021-07-09', 1122334455, '2021-07-01', '9-12', '', '', '', '', ''),
+(32, 'harshad', 'mehta', 'aaaaaaaaaaeeeeee ', 'f', '2021-07-09', 1122334455, '2021-07-01', '9-12', '', '', '', '', ''),
+(33, 'harshad', 'mehta', 'aaaaaaaaaaeeeeee ', 'f', '2021-07-09', 1122334455, '2021-07-01', '9-12', '', '', '', '', ''),
+(34, 'harshad', 'mehta', 'aaaaaaaaaaeeeeee ', 'f', '2021-07-09', 1122334455, '2021-07-01', '9-12', '', '', '', '', ''),
+(35, 'dinesh', 'kartik', 'thukrra ke mera pyaar mera intekaam dekhegi', 'm', '2020-04-03', 1818181818, '2021-07-14', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(36, 'dinesh', 'kartik', 'thukrra ke mera pyaar mera intekaam dekhegi', 'm', '2020-04-03', 1818181818, '2021-07-14', '9-12', 'y', 'y', 'y', 'y', 'y'),
+(37, 'trgytyt', 'ttbytbt', '', 'f', '2014-06-12', 2147483647, '2021-07-15', '9-12', 'y', '', 'y', '', 'y'),
+(38, 'trgytyt', 'ttbytbt', '', 'f', '2014-06-12', 2147483647, '2021-07-15', '9-12', 'y', '', 'y', '', 'y'),
+(39, 'trgytyt', 'ttbytbt', '', 'f', '2014-06-12', 2147483647, '2021-07-15', '9-12', 'y', '', 'y', '', 'y'),
+(40, 'trgytyt', 'ttbytbt', '', 'f', '2014-06-12', 2147483647, '2021-07-15', '9-12', 'y', '', 'y', '', 'y'),
+(41, 'katrina', 'kaif', 'fclcds kclkdvfc eewded', 'f', '2016-06-01', 1223334444, '2021-07-24', '9-12', 'y', '', 'y', 'y', ''),
+(42, 'katrina', 'kaif', 'no address', 'f', '2016-06-01', 1223334444, '2021-07-24', '9-12', 'y', 'y', 'y', 'y', ''),
+(43, 'dwayne', 'johnson', 'the rock', 'm', '1961-06-02', 6789543424, '2021-07-22', '3-6', 'y', 'y', '', 'y', 'y'),
+(44, 'dwayne', 'johnson', 'the rock', 'm', '1961-06-02', 6789543424, '2021-07-22', '3-6', 'y', 'y', '', 'y', 'y'),
+(45, 'tom', 'cruise', 'mi', 'm', '2021-07-01', 6574839201, '2021-07-15', '12-3', 'y', 'y', 'y', '', ''),
+(46, 'tom', 'cruise', 'mi', 'm', '2021-07-01', 6574839201, '2021-07-15', '12-3', 'y', 'y', 'y', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `covid1`
+--
+
+CREATE TABLE `covid1` (
+  `ID` int(11) NOT NULL,
+  `fName` varchar(20) NOT NULL,
+  `lName` varchar(20) NOT NULL,
+  `aadhaar` bigint(12) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `gender` enum('m','f','o') NOT NULL,
+  `DOB` date NOT NULL,
+  `number` bigint(10) NOT NULL,
+  `DOAP` date NOT NULL,
+  `timing` enum('9-12','12-3','3-6','6-9') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `covid1`
+--
+
+INSERT INTO `covid1` (`ID`, `fName`, `lName`, `aadhaar`, `address`, `gender`, `DOB`, `number`, `DOAP`, `timing`) VALUES
+(7, 'apna', 'bhidu', 988777666655, 'apna bachha hai tu', 'm', '1958-06-01', 1223334444, '2021-07-23', '6-9'),
+(8, 'apna', 'bhidu', 988777666655, 'apna bachha hai tu', 'm', '1958-06-01', 1223334444, '2021-07-23', '6-9'),
+(9, 'shyam ', 'sunder', 446655776688, 'rjrijfm oijoi', 'o', '1957-06-01', 5556667778, '2021-07-28', '3-6'),
+(10, 'shyam ', 'sunder', 446655776688, 'rjrijfm oijoi', 'o', '1957-06-01', 5556667778, '2021-07-28', '3-6');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `feedback1`
+--
+
+CREATE TABLE `feedback1` (
+  `ID` int(11) NOT NULL,
+  `fName` varchar(20) NOT NULL,
+  `lName` varchar(20) NOT NULL,
+  `number` bigint(10) NOT NULL,
+  `feedback` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `feedback1`
+--
+
+INSERT INTO `feedback1` (`ID`, `fName`, `lName`, `number`, `feedback`) VALUES
+(1, 'bgfx', 'cadvf', 32145443, 'rcvd h jhujnuyrd ecrvr'),
+(2, 'bgfx', 'cadvf', 32145443, 'rcvd h jhujnuyrd ecrvr'),
+(3, 'RVGDRGT', 'THTRHBT', 5436, ' VCBGFH HTRHFTG'),
+(4, 'RVGDRGT', 'THTRHBT', 5436, ' VCBGFH HTRHFTG'),
+(5, 'tvtrv', 'btrvrb', 2147483647, 'no feedback'),
+(6, 'tvtrv', 'btrvrb', 2147483647, 'no feedback'),
+(7, 'tvtrv', 'btrvrb', 2147483647, 'no feedback'),
+(8, 'tvtrv', 'btrvrb', 2147483647, 'no feedback'),
+(9, 'ved', 'sharma', 2147483647, 'just feedback'),
+(10, 'ved', 'sharma', 2147483647, 'just feedback'),
+(11, 'ved', 'sharma', 2147483647, 'just feedback'),
+(12, 'ved', 'sharma', 2147483647, 'just feedback'),
+(13, 'tom ', 'cruise', 2147483647, 'gtgfd'),
+(14, 'tom ', 'cruise', 2147483647, 'gtgfd'),
+(15, 'tom', 'hiddleton', 6589437424, 'just loki things'),
+(16, 'tom', 'hiddleton', 6589437424, 'just loki things');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `query1`
+--
+
+CREATE TABLE `query1` (
+  `ID` int(11) NOT NULL,
+  `fName` varchar(20) NOT NULL,
+  `lName` varchar(20) NOT NULL,
+  `number` bigint(10) NOT NULL,
+  `query` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `query1`
+--
+
+INSERT INTO `query1` (`ID`, `fName`, `lName`, `number`, `query`) VALUES
+(3, 'vvs', 'laxman', 1234567890, 'no query.'),
+(4, 'vvs', 'laxman', 1234567890, 'no query.'),
+(5, 'vvs', 'laxman', 1234567890, 'no query.'),
+(6, 'vvs', 'laxman', 1234567890, 'no query.'),
+(7, 'rahul', 'dravid', 2147483647, 'indiranagar ka gunda'),
+(8, 'rahul', 'dravid', 2147483647, 'indiranagar ka gunda'),
+(9, 'anil', 'agarwal', 7598475578, 'vedanta'),
+(10, 'anil', 'agarwal', 7598475578, 'vedanta');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vaccination`
+--
+
+CREATE TABLE `vaccination` (
+  `ID` int(11) NOT NULL,
+  `fName` varchar(20) NOT NULL,
+  `lName` varchar(20) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `gender` enum('m','f','o') NOT NULL,
+  `aadhaar` bigint(12) NOT NULL,
+  `DOB` date NOT NULL,
+  `number` bigint(11) NOT NULL,
+  `DOAP` date NOT NULL,
+  `slot` enum('first','second','third','fourth') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `vaccination`
+--
+
+INSERT INTO `vaccination` (`ID`, `fName`, `lName`, `address`, `gender`, `aadhaar`, `DOB`, `number`, `DOAP`, `slot`) VALUES
+(15, 'kiron', 'pollard', 'mi', 'f', 100100100100, '2003-07-07', 2147483647, '2021-07-20', 'fourth'),
+(16, 'kiron', 'pollard', 'mi', 'f', 100100100100, '2003-07-07', 2147483647, '2021-07-20', 'fourth'),
+(17, 'chris', 'gayle', '175', 'o', 444444666666, '2003-07-11', 6464646464, '2021-07-23', 'fourth'),
+(18, 'chris', 'gayle', '175', 'o', 444444666666, '2003-07-11', 6464646464, '2021-07-23', 'fourth'),
+(19, 'virat', 'kohli', 'fefr hyjy yujuj', 'm', 111122223333, '2003-07-10', 2434566754, '2021-07-24', 'third'),
+(20, 'virat', 'kohli', 'fefr hyjy yujuj', 'm', 111122223333, '2003-07-10', 2434566754, '2021-07-24', 'third'),
+(21, 'rahul', 'dravid', 'it doesn\'t mean you can overtake', 'm', 111100002222, '2003-07-01', 9876543211, '2021-07-21', 'second'),
+(22, 'rahul', 'dravid', 'it doesn\'t mean you can overtake', 'm', 111100002222, '2003-07-01', 9876543211, '2021-07-21', 'second');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `appointment`
+--
+ALTER TABLE `appointment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `checkup`
+--
+ALTER TABLE `checkup`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `covid1`
+--
+ALTER TABLE `covid1`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `feedback1`
+--
+ALTER TABLE `feedback1`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `query1`
+--
+ALTER TABLE `query1`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `vaccination`
+--
+ALTER TABLE `vaccination`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `appointment`
+--
+ALTER TABLE `appointment`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+
+--
+-- AUTO_INCREMENT for table `checkup`
+--
+ALTER TABLE `checkup`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+
+--
+-- AUTO_INCREMENT for table `covid1`
+--
+ALTER TABLE `covid1`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `feedback1`
+--
+ALTER TABLE `feedback1`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `query1`
+--
+ALTER TABLE `query1`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `vaccination`
+--
+ALTER TABLE `vaccination`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
